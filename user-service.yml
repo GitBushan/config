@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/users
+    username: root
+    password: 
+    
+  jpa:
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8082
+
+#Eureka
+euraka:
+   client:
+      service-url:
+         defaultZone: http://localhost:8761/eureka/
+         
+#commenting temporary as Eureka server is enabled above
+#task-service:
+#  ribbon:
+#   listOfServers: http://localhost:8083/,http://localhost:8085/
