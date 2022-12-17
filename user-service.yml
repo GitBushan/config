@@ -12,6 +12,14 @@ spring:
     hibernate:
       ddl-auto: update
 
+management:
+    security:
+        enabled: false
+    endpoints:
+        web:
+            exposure:
+                include:
+                - "*"
 server:
   port: 8082
 
@@ -25,3 +33,6 @@ euraka:
 #task-service:
 #  ribbon:
 #   listOfServers: http://localhost:8083/,http://localhost:8085/
+
+application:
+    version: user-service-v1

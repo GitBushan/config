@@ -11,6 +11,15 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5Dialect
     hibernate:
       ddl-auto: update
+      
+management:
+    security:
+        enabled: false
+    endpoints:
+        web:
+            exposure:
+                include:
+                - "*"
 #Eureka
 euraka:
    client:
@@ -20,4 +29,5 @@ euraka:
 server:
   port: 8083
 
-
+application:
+    version: task-service-v1
